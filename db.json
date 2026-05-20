@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Wireless Bluetooth Headphones",
+      "price": 1999,
+      "description": "Noise-cancelling headphones with long battery life.",
+      "category": "electronics",
+      "stock": 25
+    },
+    {
+      "id": 2,
+      "title": "Running Shoes",
+      "price": 2999,
+      "description": "Lightweight shoes designed for daily running.",
+      "category": "footwear",
+      "stock": 40
+    },
+    {
+      "id": 3,
+      "title": "Smartphone Stand",
+      "price": 499,
+      "description": "Adjustable stand for mobile phones and tablets.",
+      "category": "accessories",
+      "stock": 100
+    },
+    {
+      "id": 4,
+      "title": "Laptop Backpack",
+      "price": 1499,
+      "description": "Durable backpack with laptop compartment.",
+      "category": "bags",
+      "stock": 30
+    },
+    {
+      "id": 5,
+      "title": "Digital Watch",
+      "price": 999,
+      "description": "Water-resistant watch with multiple features.",
+      "category": "wearables",
+      "stock": 50
+    },
+    {
+      "id": 6,
+      "title": "Office Chair",
+      "price": 5999,
+      "description": "Ergonomic chair for comfortable office work.",
+      "category": "furniture",
+      "stock": 15
+    },
+    {
+      "id": 7,
+      "title": "Water Bottle",
+      "price": 299,
+      "description": "Reusable bottle suitable for daily hydration.",
+      "category": "home",
+      "stock": 200
+    },
+    {
+      "id": 8,
+      "title": "Bluetooth Speaker",
+      "price": 2499,
+      "description": "Portable speaker with deep bass sound.",
+      "category": "electronics",
+      "stock": 35
+    },
+    {
+      "id": 9,
+      "title": "Yoga Mat",
+      "price": 799,
+      "description": "Non-slip mat ideal for yoga and exercise.",
+      "category": "fitness",
+      "stock": 60
+    },
+    {
+      "id": 10,
+      "title": "LED Desk Lamp",
+      "price": 699,
+      "description": "Energy-efficient lamp with adjustable brightness.",
+      "category": "home",
+      "stock": 45
+    }
+  ]
+}

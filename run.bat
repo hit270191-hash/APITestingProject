@@ -2,7 +2,7 @@
 :: ====================================================
 :: [Constants / Paths]
 :: ====================================================
-set ALLURE_RESULTS=reports\allure-results
+set ALLURE_RESULTS=allure-results
 set ALLURE_HTML=reports\allure-html
 set PYTEST_HTML=reports\report.html
 
@@ -10,7 +10,9 @@ set PYTEST_HTML=reports\report.html
 :: Step 1: Create virtual environment
 :: ====================================================
 echo Creating Virtual Environment...
-python -m venv venv
+if not exist venv (
+    python -m venv venv
+)
 
 :: ====================================================
 :: Step 2: Activate the virtual environment
@@ -39,9 +41,13 @@ echo Creating report directories...
 mkdir %ALLURE_RESULTS%
 mkdir %ALLURE_HTML%
 
+echo Starting JSON Server...
+start /B json-server --watch db.json --port 3000
+
 :: ====================================================
 :: Step 6: Run Pytest tests
 :: ====================================================
+timeout /t 5
 echo Running tests...
 pytest -s -v ^
 --reruns=2 --reruns-delay=2 ^
@@ -49,8 +55,4 @@ pytest -s -v ^
 --html=%PYTEST_HTML% --self-contained-html ^
 testcases/
 
-:: ====================================================
-:: Step 7: Generate Allure report
-:: ====================================================
-echo Generating Allure report...
-allure generate %ALLURE_RESULTS% -o %ALLURE_HTML% --clean
+if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
