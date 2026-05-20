@@ -3,14 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repo') {
-            steps {
-                git branch: 'main',
-                    credentialsId: 'github-token',
-                    url: 'https://github.com/hit270191-hash/FakeStoreAPI-Project.git'
-            }
-        }
-
         stage('Verify Workspace') {
             steps {
                 bat 'dir'
@@ -41,8 +33,10 @@ pipeline {
     }
 
     post {
+
         always {
-            archiveArtifacts artifacts: 'reports/report.html', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'reports/report.html',
+                             allowEmptyArchive: true
         }
 
         success {
