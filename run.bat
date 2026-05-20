@@ -47,7 +47,7 @@ pytest -s -v ^
 --reruns=2 --reruns-delay=2 ^
 --alluredir=%ALLURE_RESULTS% ^
 --html=%PYTEST_HTML% --self-contained-html ^
-testCases/
+testcases/
 
 :: ====================================================
 :: Step 7: Generate Allure report
